@@ -11,7 +11,9 @@ else if($_SESSION['access_level']!="Admin"){
 	header("Location: {$home_url}/objects/login.php?action=not_admin");
 }
 
-else{
+else{// if($_SESSION['access_level']=="Admin"){
+	//header("Location: {$home_url}/index.php");
+
 	// no problem, stay on current page
 }
 ?>

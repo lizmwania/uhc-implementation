@@ -78,14 +78,14 @@ $showMessage='';
 $action = isset($_GET['action']) ? $_GET['action'] : "";
 $scid = isset($_GET['scid']) ? $_GET['scid'] : "";
 $resid = isset($_GET['resid']) ? $_GET['resid'] : "";
-$msg="Category deleted ";
+$msg="SubCategory deleted ";
 if($action=='del' && $scid)
 { // to prevent undefined index notice
     
     $id=intval($_GET['scid']);
     $conn = mysqli_connect("localhost","root","","php_login_system");
 	$query=mysqli_query($conn,"update  tblsubcategory set Is_Active='0' where SubCategoryId='$id'");
-    $msg="Category deleted ";
+    $msg="SubCategory deleted ";
     $showMessage = '<div class="alert alert-success" role="alert">
     <strong>Well done!</strong>.'.htmlentities($msg).'
     </div>';
@@ -249,7 +249,7 @@ while($row=mysqli_fetch_array($query))
 <td><?php echo htmlentities($row['subcatpostingdate']);?></td>
 <td><?php echo htmlentities($row['subcatupdationdate']);?></td>
 <td><a href="manage-subcategories.php?resid=<?php echo htmlentities($row['subcatid']);?>"><i class="ion-arrow-return-right" title="Restore this SubCategory"></i></a>
-    &nbsp;<a href="manage-subcategories.php?scid=<?php echo htmlentities($row['subcatid']);?>&&action=perdel"> <i class="fa fa-trash-o" style="color: #f05050"></i></a> </td>
+    &nbsp;<a href="manage-subcategories.php?scid=<?php echo htmlentities($row['subcatid']);?>&&action=parmdel"> <i class="fa fa-trash-o" style="color: #f05050"></i></a> </td>
 </tr>
 <?php
 $cnt++;

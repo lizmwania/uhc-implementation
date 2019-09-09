@@ -37,10 +37,10 @@ include_once '../config/core.php';
                         <!-- Right(Notification) -->
                         
 
-                                <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
                 <li>   
                     
-                <a href="#" class="dropdown-toggle waves-effect user-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                <a href="<?php echo $home_url; ?>objects/logout.php" class="dropdown-toggle waves-effect user-link" data-toggle="dropdown" role="button" aria-expanded="false">
                                   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                         &nbsp;&nbsp;<?php echo $_SESSION['firstname']; ?>
                         &nbsp;&nbsp;<span class="caret"></span>
@@ -48,7 +48,7 @@ include_once '../config/core.php';
                     
                     <ul class="dropdown-menu" role="menu">
                         <!-- log out user -->
-                        <li><a href="<?php echo $home_url; ?>/objects/logout.php">Logout</a></li>
+                        <li><a href="<?php echo $home_url; ?>objects/logout.php">Logout</a></li>
                     </ul>
                     
                 </li>

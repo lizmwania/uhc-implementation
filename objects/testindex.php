@@ -16,6 +16,7 @@
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/modern-business.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -102,12 +103,12 @@ include_once "login_checker.php";
  
   
        <div class="posts-wrapper" style="margin:20px 10px 0px 10px;" >
-       <?php include_once "count.php"; ?>
-       <p style="float:right; font-size:20px;">Views <?php echo $clicks; ?> &nbsp;&nbsp;&nbsp;</p>
+       <!-- <?php //include_once "count.php"; ?>
+       <p style="float:right; font-size:20px;">Views <?php //echo $clicks; ?> &nbsp;&nbsp;&nbsp;</p> -->
     <?php include_once "like.php"; 
       getLikes($row['pid']);
       echo '&nbsp;&nbsp;&nbsp;&nbsp;';
-      getDislikes($row['pid']);
+      getDislikes  ($row['pid']);
     ?>
   
   </div>

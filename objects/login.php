@@ -110,7 +110,7 @@ if ($email_exists && $_POST['password']&& $user->password && $user->status==1){
  
     // if access level is 'Admin',redirect to admin section
     if($user->access_level=='Admin'){
-        header("Location: {$home_url}/admin/dashboard.php?action=login_success");
+        header("Location: {$home_url}/admin/index.php?action=login_success");
     }
  
     // else, redirect only to 'Customer' section

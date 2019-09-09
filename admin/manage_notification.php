@@ -135,16 +135,16 @@ $query=mysqli_query($conn,"insert into comments(comment_subject,comment_text,ema
                                   
 <form name="notification" method="post" enctype="multipart/form-data">
  <div class="form-group m-b-20">
-<label for="exampleInputEmail1">Post Notification</label>
+<label for="exampleInputEmail1"> Notification Title</label>
    
-     <input type="text" name="subject" id="subject" class="form-control">
+     <input type="text" name="subject" id="subject" class="form-control" required>
     </div>
 
     <div class="form-group">
  
- <label for="exampleInputEmail1">Enter Email</label>
+ <label for="exampleInputEmail1">Enter Email: (you can choose single or multiple)</label>
 <select class="form-control" name="email" id="email" multiple size="5" required>
-<option value="">Send to: </option>
+<option value=""></option>
  <?php
 // Feching active categories
 $conn = mysqli_connect("localhost","root","","php_login_system");
@@ -162,7 +162,7 @@ while($result=mysqli_fetch_array($ret))
 <div class="col-sm-12">
  <div class="card-box">
 <h4 class="m-b-30 m-t-0 header-title"><b>Enter Notification</b></h4>
-<textarea class="summernote" id="notification" name="notification" required></textarea>
+<textarea class="summernote" id="notification" name="notification"  required></textarea>
 </div>
 </div>
 </div>

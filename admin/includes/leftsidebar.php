@@ -7,7 +7,7 @@
                         	<li class="menu-title">HOME</li>
 
                             <li class="has_sub">
-                                <a href="dashboard.php" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </a>
+                                <a href="index.php" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </a>
                          
                             </li>
 
@@ -41,13 +41,7 @@
                             </li>  
                      
 
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="aboutus.php">About us</a></li>
-                                    <li><a href="contactus.php">Contact us</a></li>
-                                </ul>
-                            </li>
+                            
                             
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> users </span> <span class="menu-arrow"></span></a>

@@ -29,35 +29,7 @@
   <?php 
 include_once "../config/database.php";
 include_once "./login_checker.php";
-//Genrating CSRF Token
-$nid = isset($_GET['nid']) ? $_GET['nid'] : header("location:testindex.php");
-if (empty($_SESSION['token'])) {
- $_SESSION['token'] = bin2hex(random_bytes(32));
-}
 
-if(isset($_POST['submit']))
-{
-  //Verifying CSRF Token
-if (!empty($_POST['csrftoken'])) {
-    if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
-$name=$_POST['name'];
-$email=$_POST['email'];
-$comment=$_POST['comment'];
-$postid=intval($_GET['nid']);
-$st1='0';
-$conn= mysqli_connect("localhost","root","","php_login_system");
-$query=mysqli_query($conn,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
-if($query){
-  echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
-  unset($_SESSION['token']);
-}
-else{
- echo "<script>alert('Something went wrong. Please try again.');</script>";  
-}
-
-}
-}
-}
 ?>
 
     <!-- Page Content -->

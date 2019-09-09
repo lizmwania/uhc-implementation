@@ -359,24 +359,8 @@ $array['notif'] = $rows;
 $array['count'] = $listnotif[2];
 $array['result'] = $listnotif[0];
 echo json_encode($array);
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      ?>
-
-     
-
-
-    </div> 
-    
-
-
+ ?>
+ </div> 
 </div>
 <?php include 'layout_foot.php';   ?>
 </div>

@@ -49,7 +49,7 @@ while($row=mysqli_fetch_array($query))
                       <ul class="mb-0">
 <?php
 $conn= mysqli_connect("localhost","root","","php_login_system");
-$query=mysqli_query($conn,"select tblposts.id as pid,tblposts.PostTitle as posttitle from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId limit 8");
+$query=mysqli_query($conn,"select tblposts.id as pid,tblposts.PostTitle as posttitle from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 limit 8");
 while ($row=mysqli_fetch_array($query)) {
 
 ?>
