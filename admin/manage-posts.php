@@ -119,7 +119,7 @@ if($action=='del' )
 
 {
 $postid=intval($_GET['pid']);
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"update tblposts set Is_Active=0 where id='$postid'");
 $msg="Post deleted ";
 $showMessage = '<div class="alert alert-success" role="alert">
@@ -134,7 +134,7 @@ else{
 $error="Something went wrong . Please try again.";    
 } 
 }
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select tblposts.id as postid,tblposts.PostTitle as title,tblcategory.CategoryName as category,tblsubcategory.Subcategory as subcategory from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join tblsubcategory on tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 ");
 $rowcount=mysqli_num_rows($query);
 if($rowcount==0)

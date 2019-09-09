@@ -258,7 +258,7 @@ You can create a free account in Pusher here. After you signup and login for the
 
 
 <?php
-$db = mysqli_connect("localhost","root","","php_login_system");
+$db = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 ?>
 <div class="panel panel-default" style="border-color:#fff; boder: none;">
 <div class="panel-heading">Comments</div>
@@ -295,7 +295,7 @@ $db = mysqli_connect("localhost","root","","php_login_system");
 
 <?php 
  //$database = new Database();
- $db = mysqli_connect("localhost","root","","php_login_system");
+ $db = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 if(isset($_POST) & !empty($_POST) && isset($_SESSION['access_level'])){
 	$name = mysqli_real_escape_string($db, ($_POST['name']));
 	$email = mysqli_real_escape_string($db, trim($_POST['email']));

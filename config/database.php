@@ -3,10 +3,10 @@
 class Database{
 
 	// specify your own database credentials
-	private $host = "localhost";
-	private $db_name = "php_login_system";
-	private $username = "root";
-	private $password = "";
+	private $host = "den1.mysql6.gear.host";
+	private $db_name = "uhcimplem";
+	private $username = "uhcimplem";
+	private $password = "Og047!5M4g!9";
 	public $conn;
 	
 

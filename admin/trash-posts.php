@@ -100,7 +100,7 @@ $pid = isset($_GET['pid']) ? $_GET['pid'] : "";
 if($restore)
 {
 $postid=intval($_GET['pid']);
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"update tblposts set Is_Active=1 where id='$postid'");
 $showMessage = '<div class="alert alert-success" role="alert">
 <strong>Well done!</strong>.'.htmlentities($msg).'
@@ -129,7 +129,7 @@ $presid = isset($_GET['presid']) ? $_GET['presid'] : "";
 if($presid)
 {
     $id=intval($_GET['presid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
     $query=mysqli_query($conn,"delete from  tblposts  where id='$id'");
     $delmsg="Post deleted forever";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -163,7 +163,7 @@ if($presid)
 <tbody>
 
 <?php
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select tblposts.id as postid,tblposts.PostTitle as title,tblcategory.CategoryName as category,tblsubcategory.Subcategory as subcategory from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join tblsubcategory on tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=0");
 $rowcount=mysqli_num_rows($query);
 if($rowcount==0)

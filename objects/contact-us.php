@@ -31,7 +31,7 @@ include_once "../config/database.php";
 
 <?php 
 $pagetype='contactus';
-$conn= mysqli_connect("localhost","root","","php_login_system");
+$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select PageTitle,Description from tblpages where PageName='$pagetype'");
 while($row=mysqli_fetch_array($query))
 {

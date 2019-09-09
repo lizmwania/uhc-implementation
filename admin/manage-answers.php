@@ -98,7 +98,7 @@ $quizid=$_GET['rid'];
 $name=$_POST['name'];
 $answerdetails=$_POST['answerdetails'];
 $status=1;
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"insert into answer(question_id,answer_detail,name,status) values('$quizid','$answerdetails','$name','$status')");
 if($query)
 {

@@ -87,7 +87,7 @@ if(isset($_POST['submit']))
 $catid=intval($_GET['cid']);
 $category=$_POST['category'];
 $description=$_POST['description'];
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Update  tblcategory set CategoryName='$category',Description='$description' where id='$catid'");
 if($query)
 {
@@ -117,7 +117,7 @@ else{
 
 <?php 
 $catid=intval($_GET['cid']);
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Select id,CategoryName,Description,PostingDate,UpdationDate from  tblcategory where Is_Active=1 and id='$catid'");
 $cnt=1;
 while($row=mysqli_fetch_array($query))

@@ -34,20 +34,20 @@ if(session_status()==PHP_SESSION_NONE){
 				break;
 		}
         // execute query to effect changes in the database ...
-        $conn= mysqli_connect("localhost","root","","php_login_system");
+        $conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 		mysqli_query($conn, $sql);
 		echo getRating($post_id);
 		exit(0);
 	}
 	$sql = "SELECT * FROM tblposts";
-	$conn= mysqli_connect("localhost","root","","php_login_system");
+	$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$result = mysqli_query($conn, $sql);
 	// fetch all posts from database
 	// return them as an associative array called $posts
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	function getLikes($post_id)
 	{
-		$conn= mysqli_connect("localhost","root","","php_login_system");
+		$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 		$sql = "SELECT COUNT(*) as counted
 					FROM rating_info 
 					WHERE post_id = $post_id 
@@ -65,7 +65,7 @@ if(session_status()==PHP_SESSION_NONE){
 	}
 	function getDislikes($post_id)
 	{
-		$conn= mysqli_connect("localhost","root","","php_login_system");
+		$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 		$sql = "SELECT COUNT(*) 
 					FROM rating_info 
 					WHERE post_id = $post_id 
@@ -84,7 +84,7 @@ if(session_status()==PHP_SESSION_NONE){
 	//get total number of likes and likes in a particular post
 	function getRating($post_id)
 	{
-		$conn= mysqli_connect("localhost","root","","php_login_system");
+		$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 		$rating = array();
 		$likes_query = "SELECT COUNT(*) 
 					FROM rating_info 
@@ -107,7 +107,7 @@ if(session_status()==PHP_SESSION_NONE){
 	// check if user already likes post or not
 	function userLiked($post_id)
 	{
-		$conn= mysqli_connect("localhost","root","","php_login_system");
+		$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
         $user_id= $_SESSION['user_id'] ;
 			$sql = "SELECT * FROM rating_info 
 					WHERE user_id=$user_id AND post_id=$post_id AND rating_action='like'";
@@ -121,7 +121,7 @@ if(session_status()==PHP_SESSION_NONE){
 	// ckeck if theuser already dislikes the post or not
 	function userDisliked($post_id)
 	{
-		$conn= mysqli_connect("localhost","root","","php_login_system");
+		$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
         
         $user_id= $_SESSION['user_id'] ;
 			$sql = "SELECT * FROM rating_info 

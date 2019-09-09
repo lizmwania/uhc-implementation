@@ -80,7 +80,7 @@ if($action=='del' && $rid)
 {
 
     $id=intval($_GET['rid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"update tblcategory set Is_Active='0' where id='$id'");
     $msg="Category deleted ";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -91,7 +91,7 @@ if($action=='del' && $rid)
 if($resid)
 {
     $id=intval($_GET['resid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"update tblcategory set Is_Active='1' where id='$id'");
     $msg="Category restored successfully";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -103,7 +103,7 @@ if($resid)
 if($action=='parmdel' && $_GET['rid'])
 {
     $id=intval($_GET['rid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"delete from  tblcategory  where id='$id'");
     $delmsg="Category deleted forever";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -140,7 +140,7 @@ echo $showMessage;
                                                         </thead>
                                                         <tbody>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Select id,CategoryName,Description,PostingDate,UpdationDate from  tblcategory where Is_Active=1");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
@@ -202,7 +202,7 @@ $cnt++;
                                                         </thead>
                                                         <tbody>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Select id,CategoryName,Description,PostingDate,UpdationDate from  tblcategory where Is_Active=0");
 $cnt=1;
 while($row=mysqli_fetch_array($query))

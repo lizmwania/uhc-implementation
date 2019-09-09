@@ -84,7 +84,7 @@ if($action=='del' && 'usid' )
 {
 
     $id=intval($_GET['usid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"update users set Is_Active='0' where id='$id'");
     $msg="user deleted ";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -95,7 +95,7 @@ if($action=='del' && 'usid' )
 if($resid)
 {
     $id=intval($_GET['resid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"update users set Is_Active='1' where id='$id'");
     $msg="user restored successfully";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -107,7 +107,7 @@ if($resid)
 if($action=='parmdel' && $_GET['usid'])
 {
     $id=intval($_GET['usid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"delete from  users  where id='$id'");
     $delmsg="User deleted forever";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -143,7 +143,7 @@ echo $showMessage;
                                                </thead>
                                                <tbody>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Select id,firstname,email,gender,access_level from  users where Is_Active=1");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
@@ -211,7 +211,7 @@ $page_url="read_users.php?";
                                                </thead>
                                                <tbody>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Select id,firstname,email,gender,access_level from  users where Is_Active=0 ");
 $cnt=1;
 while($row=mysqli_fetch_array($query))

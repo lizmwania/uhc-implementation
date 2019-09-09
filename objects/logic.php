@@ -4,7 +4,7 @@
 $errors = [];
 $user_id = "";
 // connect to database
-$conn = mysqli_connect('localhost', 'root', '', 'php_login_system');
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 
 // LOG USER IN
 // if (isset($_POST['firstname'])) {

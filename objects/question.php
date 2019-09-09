@@ -19,7 +19,7 @@ $question=$_POST['question'];
 $categoryid=$_POST['category'];
 
 $st1='0';
-$conn= mysqli_connect("localhost","root","","php_login_system");
+$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"insert into question(CategoryId,name,email,QuestionDetail,status) values('$categoryid','$name','$email','$question','$st1')");
 
   if($query){
@@ -113,7 +113,7 @@ body {
 <select  name="category" id="category" required>
 <option value="">Select Category </option>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $ret=mysqli_query($conn,"select id,CategoryName from  tblcategory where Is_Active=1");
 while($result=mysqli_fetch_array($ret))
 {    
@@ -147,7 +147,7 @@ while($result=mysqli_fetch_array($ret))
  <?php 
  //Display of Category name
 if($catid !=="1=1"){
-$conn= mysqli_connect("localhost","root","","php_login_system");
+$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 
 $query=mysqli_query($conn,"select CategoryName from tblcategory where id='$catid'");
 
@@ -159,7 +159,7 @@ echo "<h3 >".$row['CategoryName']."</h3>";
  // end of display of category name
  
  $sts=1;
-$conn= mysqli_connect("localhost","root","","php_login_system");
+$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
  $query=mysqli_query($conn,"select name,QuestionDetail,datetime,question_id from  question where status='$sts'ORDER BY question_id desc LIMIT 5 ");
 if($query->num_rows>1){
   //echo "There is no questions";
@@ -178,7 +178,7 @@ if($query->num_rows>1){
             <div style=" border-bottom: 1px solid black; padding-bottom:20px; margin-bottom:20px">
           <h4>Answer:</h4> <br/>';     
   $que_id = $row['question_id'];        
-$conn2= mysqli_connect("localhost","root","","php_login_system");
+$conn2= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query2=mysqli_query($conn2,"SELECT * FROM answer WHERE question_id='$que_id'");
 if($query2->num_rows<1){
  echo "<h4>" ."There is no questions, Post Your Question".  "</h4>";

@@ -80,7 +80,7 @@ $rid = isset($_GET['rid']) ? $_GET['rid'] : "";
 if($disid)
 {
     $id=intval($_GET['disid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"update question set status='1' where question_id='$id'");
     $msg="Question approved ";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -91,7 +91,7 @@ if($disid)
 if($appid)
 {
     $id=intval($_GET['appid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"update question set status='0' where question_id='$id'");
     $msg="Question unapproved";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -103,7 +103,7 @@ if($appid)
 if($action=='del' && $rid)
 {
     $id=intval($_GET['rid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"delete from  question  where question_id='$id'");
     $delmsg="Question deleted forever";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -136,7 +136,7 @@ echo  $showMessage;
                                                         </thead>
                                                         <tbody>
 <?php 
- $conn = mysqli_connect("localhost","root","","php_login_system");
+ $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Select question.status, question.question_id,  question.name,question.email,question.datetime,question.QuestionDetail,question.question_id as postid,tblcategory.CategoryName from  question join tblcategory on tblcategory.id=question.CategoryId where question.status=0");
 $cnt=1;
 while($row=mysqli_fetch_array($query))

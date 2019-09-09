@@ -12,7 +12,7 @@ include_once '../config/database.php';
 // include page header HTML
 
  
-$db = mysqli_connect("localhost","root","","php_login_system");
+$db = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 
 $sql = "SELECT * FROM comments";
 $res = mysqli_query($db, $sql);

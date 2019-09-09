@@ -126,7 +126,7 @@ move_uploaded_file($_FILES["postimage"]["tmp_name"],"postimages/".$imgnewfile);
 
 
 $postid=intval($_GET['pid']);
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"update tblposts set PostImage='$imgnewfile' where id='$postid'");
 if($query)
 {
@@ -152,7 +152,7 @@ else{
 <form name="addpost" method="post" enctype="multipart/form-data">
 <?php
 $postid=intval($_GET['pid']);
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select PostImage,PostTitle from tblposts where id='$postid' and Is_Active=1 ");
 while($row=mysqli_fetch_array($query))
 {

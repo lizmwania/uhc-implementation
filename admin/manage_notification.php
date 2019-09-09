@@ -105,7 +105,7 @@ $notification=$_POST['notification'];
 
 
 $st1='1';
-$conn= mysqli_connect("localhost","root","","php_login_system");
+$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"insert into comments(comment_subject,comment_text,email,comment_status) values('$subject','$notification','$email','$st1')");
 
   if($query){
@@ -147,7 +147,7 @@ $query=mysqli_query($conn,"insert into comments(comment_subject,comment_text,ema
 <option value=""></option>
  <?php
 // Feching active categories
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $ret=mysqli_query($conn,"select id,email from  users where Is_Active=1");
 while($result=mysqli_fetch_array($ret))
 {    

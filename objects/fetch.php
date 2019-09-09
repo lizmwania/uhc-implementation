@@ -11,7 +11,7 @@
  
  $storeNotifs = array();
 
- $connect = mysqli_connect("localhost", "root", "", "php_login_system");
+ $connect = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
  $query = "SELECT * FROM comments WHERE comment_status = 1 ORDER BY comment_id DESC LIMIT 5";
  $result = mysqli_query($connect, $query);
  $output = '';

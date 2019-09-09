@@ -83,7 +83,7 @@ if($action=='del' && $scid)
 { // to prevent undefined index notice
     
     $id=intval($_GET['scid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"update  tblsubcategory set Is_Active='0' where SubCategoryId='$id'");
     $msg="SubCategory deleted ";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -95,7 +95,7 @@ if($action=='del' && $scid)
 if($resid)
 {
     $id=intval($_GET['resid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"update  tblsubcategory set Is_Active='1' where SubCategoryId='$id'");
     $msg="Category restored successfully";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -107,7 +107,7 @@ if($resid)
 if($action=='parmdel' && $_GET['scid'])
 {
     $id=intval($_GET['scid']);
-    $conn = mysqli_connect("localhost","root","","php_login_system");
+    $conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 	$query=mysqli_query($conn,"delete from   tblsubcategory  where SubCategoryId='$id'");
     $delmsg="Category deleted forever";
     $showMessage = '<div class="alert alert-success" role="alert">
@@ -148,7 +148,7 @@ echo $showMessage;
                                                         </thead>
                                                         <tbody>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Select tblcategory.CategoryName as catname,tblsubcategory.Subcategory as subcatname,tblsubcategory.SubCatDescription as SubCatDescription,tblsubcategory.PostingDate as subcatpostingdate,tblsubcategory.UpdationDate as subcatupdationdate,tblsubcategory.SubCategoryId as subcatid from tblsubcategory join tblcategory on tblsubcategory.CategoryId=tblcategory.id where tblsubcategory.Is_Active=1");
 $cnt=1;
 $rowcount=mysqli_num_rows($query);
@@ -223,7 +223,7 @@ $cnt++;
                                                         </thead>
                                                         <tbody>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"Select tblcategory.CategoryName as catname,tblsubcategory.Subcategory as subcatname,tblsubcategory.SubCatDescription as SubCatDescription,tblsubcategory.PostingDate as subcatpostingdate,tblsubcategory.UpdationDate as subcatupdationdate,tblsubcategory.SubCategoryId as subcatid from tblsubcategory join tblcategory on tblsubcategory.CategoryId=tblcategory.id where tblsubcategory.Is_Active=0");
 $cnt=1;
 $rowcount=mysqli_num_rows($query);

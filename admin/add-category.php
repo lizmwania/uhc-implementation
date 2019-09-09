@@ -84,7 +84,7 @@ if(isset($_POST['submit']))
 $category=$_POST['category'];
 $description=$_POST['description'];
 $status=1;
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"insert into tblcategory(CategoryName,Description,Is_Active) values('$category','$description','$status')");
 if($query)
 {

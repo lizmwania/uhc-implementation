@@ -126,7 +126,7 @@ include_once "login_checker.php";
                                     <div class="wigdet-one-content">
                                         <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Categories Listed</p>
 <?php
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select * from tblcategory where Is_Active=1");
 $countcat=mysqli_num_rows($query);
 ?>
@@ -143,7 +143,7 @@ $countcat=mysqli_num_rows($query);
                                     <div class="wigdet-one-content">
                                         <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Listed Subcategories</p>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select * from tblsubcategory where Is_Active=1");
 $countsubcat=mysqli_num_rows($query);
 ?>
@@ -161,7 +161,7 @@ $countsubcat=mysqli_num_rows($query);
                                     <div class="wigdet-one-content">
                                         <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Live News</p>
 <?php
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select * from tblposts where Is_Active=1");
 $countposts=mysqli_num_rows($query);
 ?>
@@ -184,7 +184,7 @@ $countposts=mysqli_num_rows($query);
                                     <div class="wigdet-one-content">
                                         <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Trash News</p>
 <?php 
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select * from tblposts where Is_Active=0");
 $countposts=mysqli_num_rows($query);
 ?>

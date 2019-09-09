@@ -86,7 +86,7 @@ $categoryid=$_POST['category'];
 $subcatname=$_POST['subcategory'];
 $subcatdescription=$_POST['sucatdescription'];
 $status=1;
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"insert into tblsubcategory(CategoryId,Subcategory,SubCatDescription,Is_Active) values('$categoryid','$subcatname','$subcatdescription','$status')");
 if($query)
 {
@@ -122,7 +122,7 @@ else{
                                                    <option value="">Select Category </option>
 <?php
 // Feching active categories
-$conn = mysqli_connect("localhost","root","","php_login_system");
+$conn = mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $ret=mysqli_query($conn,"select id,CategoryName from  tblcategory where Is_Active=1");
 while($result=mysqli_fetch_array($ret))
 {    
