@@ -25,7 +25,7 @@
                   <ul class="list-unstyled mb-0">
                   
 <?php 
-$conn= mysqli_connect("localhost","root","","php_login_system");
+$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select id,CategoryName from tblcategory where Is_Active=1");
 while($row=mysqli_fetch_array($query))
 {
@@ -48,7 +48,7 @@ while($row=mysqli_fetch_array($query))
             <div class="card-body">
                       <ul class="mb-0">
 <?php
-$conn= mysqli_connect("localhost","root","","php_login_system");
+$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
 $query=mysqli_query($conn,"select tblposts.id as pid,tblposts.PostTitle as posttitle from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 limit 8");
 while ($row=mysqli_fetch_array($query)) {
 
