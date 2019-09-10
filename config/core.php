@@ -10,7 +10,7 @@ date_default_timezone_set('Asia/Manila');
 
 // home page url
 //TO-DO: on upload to a server remove the /HMIS directory in code
-$home_url="http://".$_SERVER['HTTP_HOST']."/HMIS/";
+$home_url="http://".$_SERVER['HTTP_HOST']. 
 
 // page given in URL parameter, default page is one
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
