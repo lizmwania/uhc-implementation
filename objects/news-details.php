@@ -105,18 +105,19 @@ $pt=$row['postdetails'];
           </div>
  
 <?php } ?>
+<div style="align-items:center">
 
    <ul class="pagination">
 
    
-<li style= "float:left; margin-left:40px; " >
+<li style= "float:left; margin-left:20px; " >
 <a style="background-color:#337ab7;width:300px: height:250px;border-radius:25px;border:none;color:white;"<?php if($page_no > $records ){
 echo "href='?nid= $previous_page'";
 } ?>>Previous</a>
 
 </li>
 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-<li style="float:right; margin-left:450px; ">
+<li style="float:right; margin-left:300px; ">
 
 <a style="background-color:#337ab7;width:300px: height:250px;border-radius:25px;border:none;color:white; position:relative;"
 <?php if($page_no < $total_records) {
@@ -127,7 +128,7 @@ echo "href='?nid=$next_page'";
 
 
 </ul>
-
+</div>
 <!--
   //Previous post
 SELECT id FROM `tblposts` WHERE id<19 ORDER BY id DESC LIMIT 1;
