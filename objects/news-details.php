@@ -65,7 +65,7 @@ if (isset($_GET['nid']) && $_GET['nid']!="") {
 
     
  $total_pages_sql = "SELECT id FROM tblposts WHERE Is_Active=1 ORDER BY id DESC LIMIT 1 ";
-  $conn= mysqli_connect("localhost","root","","php_login_system");
+  $conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
    $result_count = mysqli_query($conn,$total_pages_sql);
    $total_records = mysqli_fetch_array($result_count);
    $total_records = $total_records['id'];
@@ -78,7 +78,7 @@ if (isset($_GET['nid']) && $_GET['nid']!="") {
 
 
 $pid=$nid;
-$conn= mysqli_connect("localhost","root","","php_login_system");
+$conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
  $query=mysqli_query($conn,"select tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid' and tblposts.Is_Active=1 LIMIT 1");
 while ($row=mysqli_fetch_array($query)) {
 ?>
@@ -151,7 +151,7 @@ SELECT id FROM tblposts WHERE id>19 LIMIT 1;
 
   <?php 
  $sts=1;
- $conn= mysqli_connect("localhost","root","","php_login_system");
+ $conn= mysqli_connect("den1.mysql6.gear.host","uhcimplem","Og047!5M4g!9","uhcimplem");
  $query=mysqli_query($conn,"select name,comment,postingDate from  tblcomments where postId='$pid' and status='$sts'");
 while ($row=mysqli_fetch_array($query)) {
 ?>
